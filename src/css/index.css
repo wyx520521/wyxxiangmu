@@ -1,0 +1,301 @@
+/*重置样式*/
+*{margin: 0;padding: 0;}
+li{list-style: none;}
+a{text-decoration: none;}
+
+/*公共样式*/
+.wrapper{width: 1180px;margin: 0 auto;}
+.clear::after{content: "...";display: block;clear:both ;height: 0;overflow: hidden;visibility: hidden;}
+
+#header{
+    background-color: black;
+    line-height: 40px;
+    color: #bfbfbf;
+    font-size: 12px;
+}
+#header a{
+    color: #cfcfcf;
+}
+#header a:hover{
+    color:white;
+    text-decoration: none;
+}
+#header .sep{
+    
+        width: 1px;
+        height: 12px;
+        background: #444444;
+        margin: 14px 10px;
+    
+}
+#header .cart{
+    width: 124px;
+    text-align: center;
+    margin-left: 20px;
+    background:#343434;
+
+}
+#nav{background: white; position: relative;}
+.nav .logo{
+    width: 168px;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+.nav .logo .icon-logo{
+    width: 44px;
+    height: 36px;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+    background: url(./../images/logo.png) no-repeat;
+    
+}
+.nav .logo .name{
+    font-size: 27px;
+    color: #262626;
+    vertical-align: middle;
+    
+}
+.nav .menu{
+    margin-left: 75px;
+    height: 80px;
+    line-height: 80px;
+}
+.nav .menu li a:hover{color: red;}
+.nav .menu li{float: left;color: #202020;font-size: 16px;padding: 0 25px;}
+.nav .menu li a{color: #202020;text-decoration: none;}
+#lbt .swiper-container {
+        width: 100%;
+        height: 450px;
+        /* position: absolute;
+        top: 130px;
+        z-index: 1; */
+
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        /* Center slide text vertically */
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+ #lbt img{
+        width:100%;
+        height: 450px;
+    }
+    .prev:hover,.next:hover{
+        background-color:teal;
+        opacity: .3;
+    }
+.nav_box{
+    width: 100%;
+    height: 275px;
+    border-top: 1px solid #333;
+    display: none;
+    position: absolute;
+    top: 90px;
+    left: 0px;
+    right: 0px;
+    z-index:99999;
+    
+}
+.nav_box ul{
+    display: flex;
+    width: 1200px;
+    height: 100%;
+    
+    
+}
+.nav_box ul li{
+    width: 200px;
+    height: 100%;
+    flex: 1;
+    padding: 20px 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-color: white;
+    
+}
+.nav_box ul li div{
+    width: 170px;
+    font-size: 14px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    margin-bottom: 15px;
+    padding-right: 5px;
+    background-color: white;
+}
+.nav_box ul li div img{
+    width: 170px;
+    height: 170px;
+    display: block;
+
+}
+.nav_box ul li div .p1{
+    line-height: 30px;
+    color: #262626;
+    margin: 0;
+}
+.nav_box ul li div .price{
+    line-height: 20px;
+    color: #ea413c;
+    background-color: white;
+}
+.nav_box ul li .sg{
+    height: 100px;
+    width: 1px;
+    background: #e8e8e8;
+    position: absolute;
+    top: 58px;
+    right: 15px;
+    
+}
+
+.main .title{
+    height: 40px;
+    line-height: 40px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.main .title .title1{
+    font-size: 22px;
+    color: #262626;
+    margin-right: 20px;
+}
+.main .title .desc{
+    font-size: 16px;
+    color: #8c8c8c;
+}
+.main .imgs{
+    width: 1200px;
+    height: 370px;
+}
+.main .imgs a{
+    float: left;
+    display: block;
+    width:580px ;
+    margin-right: 20px;
+    transition: all 0.3s linear;
+    border-radius: 2px;
+    position: relative;
+    top: 0;
+}
+.main .imgs a:hover{
+    top:-5px;
+    box-shadow:3px 3px 3px  rgba(0,0,0,0.1);
+    opacity: 0.9;
+}
+
+.main .titlea{
+    height: 40px;
+    line-height: 40px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.main .titlea .title1{
+    font-size: 22px;
+    color: #262626;
+    margin-right: 20px;
+}
+.main .titlea .desc{
+    font-size: 16px;
+    color: #8c8c8c;
+}
+.main .product{
+    width: 1200px;
+    margin-bottom: 20px;
+}
+.main .product a{
+    width: 280px;
+    height: 370px;
+    padding: 20px;
+    text-align: center;
+    float: left;
+    background-color: #ffff;
+    margin-right: 20px;
+    position: relative;
+    transition: all 0.3s linear;
+    top: 0px;
+    border-radius: 2px;
+    text-decoration: none;
+}
+.main .product a:hover{
+    top:-5px;
+    box-shadow:3px 3px 3px  rgba(0,0,0,0.1);
+    opacity: 0.9;
+}
+.main .product img{
+    width: 240px;
+    height: 240px;
+    display: block;
+}
+.main .product .name{
+    display: block;
+    font-size: 16px;
+    color: #262626;
+    height: 36px;
+    line-height: 36px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.main .product .title{
+    display: block;
+    font-size: 14px;
+    color: #8c8c8c;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin:0 0 14px 0;
+}
+.main .product .price{
+    color: #ea413c;
+    font-size: 14px;
+}
+.main .bg{
+    display: block;
+    width: 1180px;
+    border-radius: 2px;
+    height: auto;
+}
+.main .titleb{
+    height: 40px;
+    line-height: 40px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.main .titleb .title1{
+    font-size: 22px;
+    color: #262626;
+    margin-right: 20px;
+}
+.main .titleb .desc{
+    font-size: 16px;
+    color: #8c8c8c;
+}
+.footer{
+    background-color: whitesmoke;
+}
+ .footer img{
+    display: block;
+    width: 1180px;
+    border-radius: 2px;
+    height: auto;
+}

@@ -1,0 +1,69 @@
+/*重置样式*/
+*{margin: 0;padding: 0;}
+li{list-style: none;}
+a{text-decoration: none;}
+
+/*公共样式*/
+.wrapper{width: 1180px;margin: 0 auto;}
+.clear::after{content: "...";display: block;clear:both ;height: 0;overflow: hidden;visibility: hidden;}
+
+#header{
+    background-color: black;
+    line-height: 40px;
+    color: #bfbfbf;
+    font-size: 12px;
+}
+#header a{
+    color: #cfcfcf;
+}
+#header a:hover{
+    color:white;
+    text-decoration: none;
+}
+#header .sep{
+    
+        width: 1px;
+        height: 12px;
+        background: #444444;
+        margin: 14px 10px;
+    
+}
+#header .cart{
+    width: 124px;
+    text-align: center;
+    margin-left: 20px;
+    background:#343434;
+
+}
+#nav{background: white; position: relative;}
+.nav .logo{
+    width: 168px;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+.nav .logo .icon-logo{
+    width: 44px;
+    height: 36px;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+    background: url(./../images/logo.png) no-repeat;
+    
+}
+.nav .logo .name{
+    font-size: 27px;
+    color: #262626;
+    vertical-align: middle;
+    
+}
+.nav .menu{
+    margin-left: 75px;
+    height: 80px;
+    line-height: 80px;
+}
+.nav .menu li a:hover{color: red;}
+.nav .menu li{float: left;color: #202020;font-size: 16px;padding: 0 25px;}
+.nav .menu li a{color: #202020;text-decoration: none;}

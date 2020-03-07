@@ -1,1 +1,1 @@
-"use strict";
+"use strict";$(".dl").click(function(a){a.preventDefault(),$.ajax({url:"/gx2",type:"post",data:{username:$(".username").val(),password:$(".pwd").val()},dataType:"",success:function(a){var e=JSON.parse(a);console.log(e),0===e.code?$(".ts").css("display","block"):window.location.href="./index.html"}})});

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车</title>
+    <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/detail.css">
+    <style>
+        img{
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+<div id="header">
+<header class="wrapper clear">
+      <a href="./index.html" class="pull-left">搜狗商城</a>
+      <span class="sep pull-left"></span>
+      <a href="#" class="pull-left">意见反馈</a>
+      <span class="sep pull-left" ></span>
+      <a href="#" class="pull-left">收藏本站</a>
+      <a href="./cart.html" class="cart pull-right">购物车（0）</a>
+      <a href="#" class="pull-right">消息通知</a>
+      <span class="sep pull-right"></span>
+      <a href="./login.html" class="pull-right" target="_blank">注册</a>
+      <span class="sep pull-right"></span>
+      <a href="./login.html" class="pull-right" target="_blank">登录</a>
+</header>
+</div>
+
+<div class="nav wrapper">
+    <a href="#" class="logo pull-left">
+      <span class="icon-logo"></span>
+      <span class="name">搜狗商城</span>
+    </a>
+    <ul class="menu pull-left">
+      <li><a href="./list.html" target="_blank">首页</a></li>
+      <li><a href="./list.html" target="_blank">智能翻译</a></li>
+      <li><a href="./list.html" target="_blank">糖猫手表</a></li>
+      <li><a href="./list.html" target="_blank">配件</a></li>
+      <li><a href="./list.html" target="_blank">社区</a></li>
+      <li><a href="./list.html" target="_blank">录音笔网页版</a></li>
+    </ul>
+</div>
+<div class="container">
+    <h3 class="text-center">购物车</h3>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>全选
+                    <input type="checkbox" id="selectAll">
+                </th>
+                <th>商品图片</th>
+                <th>商品名称</th>
+                <th>商品价格</th>
+                <th>商品数量</th>
+                <th>小计</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody id="tb">
+            
+        </tbody>
+    </table>
+    <hr />
+    <input type="button" value="删除所选" class="btn btn-danger" id="del_select">
+</div>
+    
+</body>
+<script>
+let c = ele=>document.createElement(ele)
+let $ = ele=>{
+    let e = null
+    if( ele[0] === "#" ){
+        e = document.querySelector(ele)
+    }else{
+        e = document.querySelectorAll(ele)
+    }
+    return e
+}
+//获取购物车里的数据
+let arr = JSON.parse(localStorage.getItem("cartList"))
+// 创建table的函数
+let create_table = (arr)=>{
+    $('#tb').innerHTML = ""
+    
+    for( let product of arr ){
+        let tr = c('tr')
+        let str = `
+            <td><input type="checkbox" class="checkbox"></td>
+            <td><img src="${product.image}" alt=""></td>
+            <td style="width:45%;">${product.name}</td>
+            <td>${product.salePrice}</td>
+            <td>
+                <input type="button" value="-" class="btn btn-primary btn-sm reduce" _id="${product.productId}" />
+                <input type="text" value="${product.number}" disabled style="width:80px"/>
+                <input type="button" value="+" class="btn btn-danger btn-sm add" _id="${product.productId}" />
+            </td>
+            <td>${product.number*product.salePrice}</td>
+        `
+        tr.innerHTML = str
+        let del_btn = c("input")
+        let td_del = c('td')
+        del_btn.type = "button"
+        del_btn.value = "删除"
+        del_btn.className = "btn btn-danger"
+        del_btn._id = product._id
+        // 为删除按钮绑定事件
+        del_btn.onclick = function(){
+            let arr = JSON.parse( localStorage.getItem("cartList") )
+            arr = arr.filter(item=>{
+                return item._id !== this._id
+            })
+            localStorage.setItem("cartList",JSON.stringify(arr))
+            create_table(arr)
+        }
+        td_del.appendChild(del_btn)
+        tr.appendChild(td_del)
+        $('#tb').appendChild(tr)
+    }
+    // 当点击增加按钮的时
+    for( let i=0;i< $('.add').length;i++ ){
+        $('.add')[i].addEventListener('click',function(){
+            change_product_num(this.getAttribute("_id"),"+")
+        })
+    }
+    // 当点击减少按钮时
+    for( let i=0;i< $('.reduce').length;i++ ){
+        $('.reduce')[i].addEventListener('click',function(){
+            change_product_num(this.getAttribute("_id"),"-")
+        })
+    }
+}
+create_table(arr)
+
+
+//当发生onstorage事件时，重置表格
+window.onstorage = function(e){
+    let arr = JSON.parse(localStorage.getItem("cartList"))
+    create_table(arr)
+}
+
+function change_product_num(id,ope){
+    let arr = JSON.parse(localStorage.getItem("cartList"))
+    for( let product of arr ){
+        // 找出id一样的商品
+        if( product.productId === id ){
+            // 判断需要加还是需要减
+            if(ope === "+"){
+                number++
+            }else{
+                if( number <= 1 ){
+                    alert("已经最小了，不能再减少了！")
+                }else{
+                    number--
+                }
+            }
+        }
+    }
+    // 重新渲染页面
+    create_table(arr);
+    // 更新localStorage中的数据
+    localStorage.setItem("cartList",JSON.stringify(arr))
+}
+
+//删除所选
+$("#del_select").onclick = function(){
+    let checkboxes = $(".checkbox")
+    for(let i=0;i<checkboxes.length;i++){
+        if(checkboxes[i].checked){
+            $("#tb").removeChild(checkboxes[i].parentNode.parentNode)
+        }
+    }
+}
+
+
+//全选、全不选
+let checkboxes = $('.checkbox')
+$("#selectAll").onclick = function(){
+    for(let i=0;i<checkboxes.length;i++){
+        checkboxes[i].checked = $("#selectAll").checked
+    }
+}
+</script>
+</html>

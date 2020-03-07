@@ -1,0 +1,132 @@
+[
+    {
+        "name": "首页",
+        "link": "../pages/index.html",
+        "type": "_blank",
+        "subs": []
+    },
+
+    {
+        "name": "智能翻译",
+        "link": "../pages/list.html",
+        "type": "_self",
+        "subs": [
+            {
+                "name": "搜狗AI录音笔S1",
+                "link": "https://mall.sogou.com/goods/detail/31269",
+                "img": "//mall01.sogoucdn.com/image/2020/02/11/20200211202500_2861.jpg",
+                "price": "2698"
+            },
+            {
+                "name": "搜狗AI录音笔E1",
+                "link": "https://mall.sogou.com/goods/detail/31372",
+                "img": "//mall02.sogoucdn.com/image/2020/02/10/20200210213306_2808.jpg",
+                "price": "1298"
+            },
+            {
+                "name": "C1 Pro故宫宫廷联名款",
+                "link": "https://mall.sogou.com/goods/detail/31408",
+                "img": "//mall03.sogoucdn.com/image/2020/02/10/20200210215438_2811.jpg",
+                "price": "648"
+            },
+            {
+                "name": "搜狗AI录音笔C1 Pro",
+                "link": "https://mall.sogou.com/goods/detail/29153",
+                "img": "//mall02.sogoucdn.com/image/2019/12/10/20191210105740_2530.jpg",
+                "price": "598"
+            },
+            {
+                "name": "录音翻译笔",
+                "link": "https://mall.sogou.com/goods/detail/47",
+                "img": "//mall01.sogoucdn.com/image/2018/12/27/20181227141346_4288.png",
+                "price": "398"
+            }
+        ]
+    },
+    {
+        "name": "糖猫手表",
+        "link": "../pages/list.html",
+        "type": "_self",
+        "subs": [
+            {
+                "name": "糖猫Y1",
+                "link": "https://mall.sogou.com/goods/detail/25885",
+                "img": "//mall03.sogoucdn.com/image/2019/08/07/20190807143422_1735.jpg",
+                "price": "598"
+            },
+            {
+                "name": "JOY2大嘴猴联名款",
+                "link": "https://mall.sogou.com/goods/detail/24823",
+                "img": "//mall01.sogoucdn.com/image/2019/07/25/20190725113136_1704.jpg",
+                "price": "399"
+            },
+            {
+                "name": "糖猫plus2",
+                "link": "https://mall.sogou.com/goods/detail/21384",
+                "img": "//mall02.sogoucdn.com/image/2019/05/21/20190521182056_6117.jpg",
+                "price": "199"
+            },
+            {
+                "name": "糖猫E2",
+                "link": "https://mall.sogou.com/goods/detail/11907",
+                "img": "//mall03.sogoucdn.com/image/2018/12/21/20181221190346_4187.png",
+                "price": "398"
+            },
+            {
+                "name": "糖猫Plus",
+                "link": "https://mall.sogou.com/goods/detail/12503",
+                "img": "//mall01.sogoucdn.com/image/2018/12/24/20181224215731_4278.jpg",
+                "price": "198"
+            }
+        ]
+    },
+    {
+        "name": "配件",
+        "link": "../pages/list.html",
+        "type": "_self",
+        "subs": [
+            {
+                "name": "糖猫T2 卡通吊坠保护套",
+                "link": "https://mall.sogou.com/goods/detail/19608",
+                "img": "//mall02.sogoucdn.com/image/2019/04/19/20190419115853_4810.jpg",
+                "price": "60"
+            },
+            {
+                "name": "basic 卡通吊坠保护套",
+                "link": "https://mall.sogou.com/goods/detail/19728",
+                "img": "//mall01.sogoucdn.com/image/2019/04/19/20190419115420_4809.jpg",
+                "price": "60"
+            },
+            {
+                "name": "糖猫学生儿童小书包",
+                "link": "https://mall.sogou.com/goods/detail/13999",
+                "img": "//mall02.sogoucdn.com/image/2019/04/19/20190419115054_4807.jpg",
+                "price": "99"
+            },
+            {
+                "name": "T2/basic专用原装表带",
+                "link": "https://mall.sogou.com/goods/detail/14119",
+                "img": "//mall03.sogoucdn.com/image/2019/04/19/20190419115225_4808.jpg",
+                "price": "80"
+            },
+            {
+                "name": "Color专用表带",
+                "link": "https://mall.sogou.com/goods/detail/52",
+                "img": "//mall02.sogoucdn.com/image/2018/12/24/20181224120209_4242.png",
+                "price": "59"
+            }
+        ]
+    },
+    {
+        "name": "社区",
+        "link": "../pages/list.html",
+        "type": "_self",
+        "subs": []
+    },
+    {
+        "name": "录音笔网页版",
+        "link": "../pages/list.html",
+        "type": "_blank",
+        "subs": []
+    }
+]
